@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestiunea unei Case de Producție Muzicală</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Adaugă un fișier CSS pentru stilizare, dacă este necesar -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #444;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestiunea unei Case de Producție Muzicală</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Obiectivul Proiectului</h2>
+            <p>Proiectul „Gestiunea unei case de producție muzicală” are ca scop dezvoltarea unei aplicații web ce permite administrarea eficientă a proceselor specifice unei case de producție muzicală. Aplicația permite gestionarea informațiilor despre artiști, albume, piese muzicale, colaboratori și proiecte muzicale, toate integrate într-o platformă centralizată. Scopul principal este de a facilita procesul de urmărire și administrare a producției muzicale de la început până la sfârșit.</p>
+        </section>
+
+        <section>
+            <h2>Arhitectura Aplicației</h2>
+            <h3>1. Roluri, Entități și Procese</h3>
+            <p>Aplicația are patru entități principale:</p>
+            <ul>
+                <li><strong>Artiști:</strong> Reprezintă persoanele sau grupurile muzicale care creează muzică.</li>
+                <li><strong>Albume:</strong> Conțin informații despre albumele muzicale ale artiștilor.</li>
+                <li><strong>Piese muzicale:</strong> Sunt piesele individuale din albumele artiștilor.</li>
+                <li><strong>Colaboratori:</strong> Persoanele care ajută la producția muzicală, cum ar fi producători, ingineri de sunet, lyriciști etc.</li>
+                <li><strong>Proiecte muzicale:</strong> Proiectele la care artistul lucrează împreună cu colaboratorii pentru a crea muzică nouă.</li>
+            </ul>
+
+            <h3>2. Relațiile între Entități</h3>
+            <p>Fiecare artist poate avea unul sau mai multe albume. Fiecare album poate conține mai multe piese muzicale. De asemenea, proiectele muzicale pot implica colaboratori și pot fi asociate cu unul sau mai mulți artiști.</p>
+
+            <h3>3. Componentele Principale ale Aplicației</h3>
+            <p>Aplicația include două componente principale:</p>
+            <ul>
+                <li><strong>Frontend:</strong> Folosește HTML, CSS și JavaScript pentru crearea unei interfețe intuitive și interactive.</li>
+                <li><strong>Backend:</strong> PHP gestionează logica aplicației, iar MySQL stochează datele în baza de date.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Descrierea Bazei de Date</h2>
+            <p>Baza de date „music_management” conține următoarele tabele:</p>
+            <ul>
+                <li><strong>artists:</strong> Informații despre artiști (nume, gen, date de contact).</li>
+                <li><strong>albums:</strong> Detalii despre albume (titlu, dată lansare, artist_id).</li>
+                <li><strong>songs:</strong> Piese muzicale din albume (titlu, durată, album_id).</li>
+                <li><strong>collaborators:</strong> Detalii despre colaboratori (nume, rol, date de contact).</li>
+                <li><strong>projects:</strong> Proiecte muzicale (nume, descriere, status, artist_id, collaborator_id).</li>
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>
